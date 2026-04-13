@@ -404,7 +404,7 @@
                                              <span data-key="feat_qr">Bespoke QR Code Deployment</span>
                                          </li>
                                      </ul>
-                                     <button onclick="simulateStripeCheckout('price_monthly')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white transition-colors font-bold py-3 rounded-lg shadow-sm" data-key="btn_monthly">Select Plan</button>
+                                     <button onclick="proceedToCheckout('monthly')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white transition-colors font-bold py-3 rounded-lg shadow-sm" data-key="btn_monthly">Select Plan</button>
                                  </div>
                                  
                                  <!-- ANNUAL PLAN HERO CARD -->
@@ -428,7 +428,7 @@
                                              <span data-key="feat_free">2 Months Free Included</span>
                                          </li>
                                      </ul>
-                                     <button onclick="simulateStripeCheckout('price_annual')" class="w-full bg-brand text-white hover:bg-brand-dark transition-colors font-bold py-3 rounded-lg shadow-md" data-key="btn_annual">Select Plan</button>
+                                     <button onclick="proceedToCheckout('annual')" class="w-full bg-brand text-white hover:bg-brand-dark transition-colors font-bold py-3 rounded-lg shadow-md" data-key="btn_annual">Select Plan</button>
                                  </div>
                              </div>
                         </div>
@@ -1083,6 +1083,25 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             
+            // Stripe Checkout Live Integration
+            window.proceedToCheckout = function(planId) {
+                const overlay = document.getElementById('stripe-overlay');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                
+                const stripeLinks = {
+                    'monthly': 'https://buy.stripe.com/5kQdRb7371fO8I49o200000',
+                    'annual': 'https://buy.stripe.com/14A5kFgDH1fO5vSfMq00001'
+                };
+                
+                // Retain the premium "Redirecting" UI before firing the URL
+                setTimeout(() => {
+                    if(stripeLinks[planId]) {
+                        window.location.href = stripeLinks[planId];
+                    }
+                }, 1800); 
+            };
+
             // Dealer's Choice Roulette Logic
             const dealerBtns = document.querySelectorAll('.dealer-choice-btn');
             dealerBtns.forEach(btn => {
