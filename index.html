@@ -20,10 +20,10 @@
                     },
                     colors: {
                         brand: {
-                            /* Elegant Champagne Gold / Amber for luxury tech */
-                            light: '#fbbf24', 
-                            DEFAULT: '#d97706', 
-                            dark: '#b45309', 
+                            /* Sleek Nocturnal Blue for premium tech */
+                            light: '#60a5fa', 
+                            DEFAULT: '#3b82f6', 
+                            dark: '#1e40af', 
                         }
                     }
                 }
@@ -65,11 +65,11 @@
         .menu-card:hover {
             transform: translateY(-1px);
             background-color: rgba(255, 255, 255, 0.9);
-            border-color: rgba(217, 119, 6, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
         }
         .dark .menu-card:hover {
             background-color: rgba(51, 65, 85, 0.9);
-            border-color: rgba(217, 119, 6, 0.4);
+            border-color: rgba(59, 130, 246, 0.4);
         }
 
         .accordion-content {
@@ -120,10 +120,10 @@
         .animate-text-gradient {
             background: linear-gradient(
                 270deg, 
-                #fbbf24, 
+                #60a5fa, 
                 #FFFFFF, 
-                #d97706, 
-                #fbbf24
+                #3b82f6, 
+                #60a5fa
             );
             background-size: 200% 200%;
             -webkit-background-clip: text;
@@ -134,8 +134,8 @@
         }
 
         @keyframes pulse-bar-glow {
-            0%, 100% { box-shadow: 0 0 10px rgba(217, 119, 6, 0.4); transform: scaleX(1); opacity: 0.8; }
-            50% { box-shadow: 0 0 25px rgba(217, 119, 6, 0.9); transform: scaleX(1.15); opacity: 1; }
+            0%, 100% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.4); transform: scaleX(1); opacity: 0.8; }
+            50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.9); transform: scaleX(1.15); opacity: 1; }
         }
         
         .animate-pulse-bar {
@@ -172,11 +172,11 @@
         .splash-line {
             width: 0;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #d97706, transparent);
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
             border-radius: 9999px;
             margin-top: 1.5rem;
             animation: splashLineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 1.2s;
-            box-shadow: 0 0 20px rgba(217, 119, 6, 0.6);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
         }
         .splash-slogan {
             opacity: 0;
@@ -225,10 +225,10 @@
         }
         .dealer-highlight {
             animation: dealer-shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-            background-color: rgba(217, 119, 6, 0.15) !important;
+            background-color: rgba(59, 130, 246, 0.15) !important;
             border-color: transparent !important;
             border-radius: 0.5rem;
-            box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.15);
+            box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.15);
         }
         .dark .dealer-spin { background-color: rgba(255, 255, 255, 0.05) !important; box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05); }
     </style>
@@ -240,7 +240,7 @@
         <div class="flex flex-col items-center justify-center text-center px-4">
             <span class="splash-welcome text-brand-light font-bold tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Welcome To</span>
             <h1 class="font-cursive text-6xl sm:text-8xl text-white tracking-tight splash-text drop-shadow-2xl">
-                Hello Charchee
+                Hello Charchee Demo
             </h1>
             <div class="splash-line"></div>
             <h2 class="font-cursive text-3xl sm:text-5xl text-slate-300 drop-shadow-md splash-slogan mt-6" data-key="footer_slogan">
@@ -251,7 +251,7 @@
 
     <!-- Blank & Gold Clean Gradient Background -->
     <div class="fixed inset-0 z-[-2] bg-slate-100 dark:bg-slate-900">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-200/40 via-transparent to-transparent dark:from-amber-900/20 dark:via-transparent dark:to-transparent"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-200/40 via-transparent to-transparent dark:from-blue-900/30 dark:via-transparent dark:to-transparent"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-200 via-transparent to-transparent dark:from-slate-800/50 dark:via-transparent dark:to-transparent"></div>
     </div>
 
@@ -274,7 +274,7 @@
                 <button data-lang="ja" class="lang-btn transition-transform hover:scale-110 opacity-60 hover:opacity-100" aria-label="日本語"><img src="https://flagcdn.com/w40/jp.png" class="w-6 h-6 rounded-full object-cover shadow-sm" alt="Japan Flag"></button>
                 <button data-lang="pl" class="lang-btn transition-transform hover:scale-110 opacity-60 hover:opacity-100" aria-label="Polski"><img src="https://flagcdn.com/w40/pl.png" class="w-6 h-6 rounded-full object-cover shadow-sm" alt="Polish Flag"></button>
             </div>
-            <button id="themeToggle" class="theme-toggle ml-4 p-3 rounded-full shadow-lg text-slate-700 dark:text-yellow-300 fade-in-up" aria-label="Toggle Dark Mode" style="animation-delay: 100ms;">
+            <button id="themeToggle" class="theme-toggle ml-4 p-3 rounded-full shadow-lg text-slate-700 dark:text-blue-300 fade-in-up" aria-label="Toggle Dark Mode" style="animation-delay: 100ms;">
                 <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             </button>
@@ -282,7 +282,7 @@
 
         <header class="text-center mb-8 fade-in-up stagger-1 relative z-40">
             <h1 class="font-cursive text-5xl sm:text-7xl text-slate-800 dark:text-white tracking-tight drop-shadow-lg transition-colors duration-300" data-key="company_name">
-                Hello Charchee
+                Hello Charchee Demo
             </h1>
             <p class="mt-2 text-lg sm:text-2xl font-light text-slate-600 dark:text-slate-300 tracking-wide" data-key="company_sub">
                 Superior Restaurant & Bar Info Hubs
@@ -662,7 +662,7 @@
                 tab_overview: "Overview",
                 tab_menu: "Interactive Menu",
                 tab_guide_global: "Our Story",
-                company_name: "Hello Charchee",
+                company_name: "Hello Charchee Demo",
                 company_sub: "Superior Restaurant & Bar Info Hubs",
                 footer_slogan: "Superior Restaurant & Bar Info Hubs.",
                 card1_title: "Zero Friction",
@@ -745,7 +745,7 @@
             },
             'es': {
                 tab_overview: "Resumen", tab_menu: "Menú Interactivo", tab_guide_global: "Nuestra Historia",
-                company_name: "Hello Charchee", company_sub: "Centros de Información Superiores para Restaurantes", footer_slogan: "Centros de Información Superiores para Restaurantes.",
+                company_name: "Hello Charchee Demo", company_sub: "Centros de Información Superiores para Restaurantes", footer_slogan: "Centros de Información Superiores para Restaurantes.",
                 card1_title: "Cero Fricción", 
                 card1_body1: "Los dueños de restaurantes pasan innumerables horas perfeccionando la experiencia culinaria, pero a menudo obligan a los huéspedes a luchar con menús de papel sucios o descargas de PDF.", 
                 card1_body2: "Hello Charchee es una aplicación web sin descargas exclusiva para su comedor. Reemplazamos los menús físicos obsoletos con un centro digital elegante e instantáneo.",
@@ -801,7 +801,7 @@
             },
             'fr': {
                 tab_overview: "Aperçu", tab_menu: "Menu Interactif", tab_guide_global: "Notre Histoire",
-                company_name: "Hello Charchee", company_sub: "Centres d'Information Supérieurs pour Restaurants", footer_slogan: "Centres d'Information Supérieurs pour Restaurants.",
+                company_name: "Hello Charchee Demo", company_sub: "Centres d'Information Supérieurs pour Restaurants", footer_slogan: "Centres d'Information Supérieurs pour Restaurants.",
                 card1_title: "Zéro Friction", 
                 card1_body1: "Les restaurateurs passent d'innombrables heures à perfectionner l'expérience culinaire, mais forcent souvent les clients à se débattre avec des menus en papier sales.", 
                 card1_body2: "Hello Charchee est une application web sans téléchargement conçue exclusivement pour votre salle à manger. Nous remplaçons les menus physiques par un centre numérique élégant.",
@@ -857,7 +857,7 @@
             },
             'de': {
                 tab_overview: "Übersicht", tab_menu: "Interaktives Menü", tab_guide_global: "Unsere Geschichte",
-                company_name: "Hello Charchee", company_sub: "Überlegene Info-Hubs für Restaurants", footer_slogan: "Überlegene Info-Hubs für Restaurants.",
+                company_name: "Hello Charchee Demo", company_sub: "Überlegene Info-Hubs für Restaurants", footer_slogan: "Überlegene Info-Hubs für Restaurants.",
                 card1_title: "Null Reibung", 
                 card1_body1: "Gastronomen verbringen zahllose Stunden damit, das kulinarische Erlebnis zu perfektionieren, zwingen Gäste aber oft dazu, sich mit schmutzigen Papiermenüs oder klobigen PDF-Downloads herumzuschlagen.", 
                 card1_body2: "Hello Charchee ist eine reibungslose Web-App ohne Download, exklusiv für Ihren Speisesaal. Wir ersetzen veraltete physische Menüs durch einen eleganten digitalen Hub.",
@@ -913,7 +913,7 @@
             },
             'ja': {
                 tab_overview: "概要", tab_menu: "インタラクティブメニュー", tab_guide_global: "私たちのストーリー",
-                company_name: "Hello Charchee", company_sub: "優れたレストラン＆バー インフォハブ", footer_slogan: "優れたレストラン＆バー インフォハブ。",
+                company_name: "Hello Charchee Demo", company_sub: "優れたレストラン＆バー インフォハブ", footer_slogan: "優れたレストラン＆バー インフォハブ。",
                 card1_title: "摩擦ゼロ", 
                 card1_body1: "レストランのオーナーは料理の体験を完成させるために膨大な時間を費やしますが、ゲストに汚れた紙のメニューや使いにくいPDFのダウンロードを強いていることがよくあります。", 
                 card1_body2: "Hello Charcheeは、ダイニングルーム専用に構築されたダウンロード不要のWebアプリです。時代遅れの物理的なメニューをエレガントで即座にアクセスできるデジタルハブに置き換えます。",
@@ -969,7 +969,7 @@
             },
             'zh': {
                 tab_overview: "产品概述", tab_menu: "互动菜单", tab_guide_global: "品牌故事",
-                company_name: "Hello Charchee", company_sub: "卓越的餐厅与酒吧信息中心", footer_slogan: "卓越的餐厅与酒吧信息中心。",
+                company_name: "Hello Charchee Demo", company_sub: "卓越的餐厅与酒吧信息中心", footer_slogan: "卓越的餐厅与酒吧信息中心。",
                 card1_title: "零摩擦", 
                 card1_body1: "餐厅老板花费无数时间完善餐饮体验，却往往让客人去与肮脏的纸质菜单或笨重的PDF下载作斗争。", 
                 card1_body2: "Hello Charchee 是一款专为您的餐厅打造的无摩擦、免下载Web应用程序。我们用优雅的即时数字中心取代了过时的物理菜单。",
@@ -1025,7 +1025,7 @@
             },
             'pl': {
                 tab_overview: "Przegląd", tab_menu: "Interaktywne Menu", tab_guide_global: "Nasza Historia",
-                company_name: "Hello Charchee", company_sub: "Najlepsze Centra Informacyjne dla Restauracji", footer_slogan: "Najlepsze Centra Informacyjne dla Restauracji.",
+                company_name: "Hello Charchee Demo", company_sub: "Najlepsze Centra Informacyjne dla Restauracji", footer_slogan: "Najlepsze Centra Informacyjne dla Restauracji.",
                 card1_title: "Zero Tarcia", 
                 card1_body1: "Restauratorzy spędzają niezliczone godziny na doskonaleniu wrażeń kulinarnych, ale często zmuszają gości do zmagania się z brudnymi papierowymi menu lub pobieraniem plików PDF.", 
                 card1_body2: "Hello Charchee to aplikacja internetowa bez pobierania, stworzona wyłącznie dla Twojej sali jadalnej. Zastępujemy przestarzałe fizyczne menu eleganckim centrum cyfrowym.",
@@ -1083,25 +1083,6 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             
-            // Stripe Checkout Live Integration
-            window.proceedToCheckout = function(planId) {
-                const overlay = document.getElementById('stripe-overlay');
-                overlay.classList.remove('opacity-0', 'pointer-events-none');
-                overlay.classList.add('opacity-100');
-                
-                const stripeLinks = {
-                    'monthly': 'https://buy.stripe.com/5kQdRb7371fO8I49o200000',
-                    'annual': 'https://buy.stripe.com/14A5kFgDH1fO5vSfMq00001'
-                };
-                
-                // Retain the premium "Redirecting" UI before firing the URL
-                setTimeout(() => {
-                    if(stripeLinks[planId]) {
-                        window.location.href = stripeLinks[planId];
-                    }
-                }, 1800); 
-            };
-
             // Dealer's Choice Roulette Logic
             const dealerBtns = document.querySelectorAll('.dealer-choice-btn');
             dealerBtns.forEach(btn => {
@@ -1154,21 +1135,23 @@
                 });
             });
 
-            // Stripe Checkout Simulation
-            window.simulateStripeCheckout = function(planId) {
+            // Stripe Checkout Live Integration
+            window.proceedToCheckout = function(planId) {
                 const overlay = document.getElementById('stripe-overlay');
                 overlay.classList.remove('opacity-0', 'pointer-events-none');
                 overlay.classList.add('opacity-100');
                 
-                // Simulate network latency before redirecting
+                const stripeLinks = {
+                    'monthly': 'https://buy.stripe.com/5kQdRb7371fO8I49o200000',
+                    'annual': 'https://buy.stripe.com/14A5kFgDH1fO5vSfMq00001'
+                };
+                
+                // Retain the premium "Redirecting" UI before firing the URL
                 setTimeout(() => {
-                    overlay.classList.remove('opacity-100');
-                    overlay.classList.add('opacity-0', 'pointer-events-none');
-                    
-                    // TODO: Replace alert with actual Stripe integration
-                    // e.g., stripe.redirectToCheckout({ sessionId: 'YOUR_SESSION_ID' })
-                    alert(`Stripe Integration Framework is Ready!\n\nWhen live, this will seamlessly redirect the user to the Stripe Checkout page for the [${planId}] plan.`);
-                }, 2500);
+                    if(stripeLinks[planId]) {
+                        window.location.href = stripeLinks[planId];
+                    }
+                }, 1800); 
             };
 
             // Tab Logic
